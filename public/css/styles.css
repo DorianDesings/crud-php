@@ -1,0 +1,47 @@
+body { font-family: sans-serif; overflow: hidden; }
+
+.main { width: 80%; margin-left: auto; margin-right: auto; position: relative; overflow: hidden; min-height: 100vh; }
+
+.all-users, .user-info { background: steelblue; width: 100%; position: absolute; -webkit-transition: left .5s; -o-transition: left .5s; transition: left .5s; }
+
+.all-users { top: 0; left: 0; }
+
+.all-users--hide { left: -100%; }
+
+.user-info { left: 100%; }
+
+.user-info--show { left: 0; }
+
+.top-bar { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; padding: 0 1em; color: #fff; border-bottom: 3px solid #fff; }
+
+.top-bar__buttons { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 25%; }
+
+.top-bar__user-info { background: yellowgreen; font-size: 1.5em; padding: .2em .4em; cursor: pointer; }
+
+.search { border-bottom: 1px solid #fff; }
+
+.search input { font-size: 1em; color: #fff; border: none; background: none; }
+
+.content__header, .content__user { display: grid; grid-template-columns: 100px repeat(3, 1fr) 150px 150px; background: lightblue; -webkit-box-align: center; -ms-flex-align: center; align-items: center; justify-items: center; }
+
+.content__header--user-info, .content__user--user-info { grid-template-columns: repeat(5, 1fr); padding: 1em .5em; }
+
+.content__header { border-bottom: 1px solid grey; }
+
+.content__link { text-decoration: none; padding: 1em 0; }
+
+.content__text { text-transform: capitalize; }
+
+.content__text.content__text--email { text-transform: lowercase; }
+
+.content__text--header { text-transform: uppercase; }
+
+.button { border-radius: 5px; padding: .5em .8em; cursor: pointer; color: #fff; display: block; }
+
+.button i { padding-left: .5em; }
+
+.button--edit { background: green; }
+
+.button--delete, .button--cancel { background: crimson; }
+
+.button--hide { display: none; }

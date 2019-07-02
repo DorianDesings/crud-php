@@ -1,0 +1,48 @@
+doctype html
+html(lang='es')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0')
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous")
+        link(rel="stylesheet", href="css/styles.css")
+    body
+       main#main.main
+        #all-users.all-users
+            .top-bar
+                h1.top-bar__title All Users
+                .top-bar__buttons
+                    .search
+                        input(type="text" placeholder="Search User")#search-text
+                    #user-info-button.top-bar__user-info
+                        i.fas.fa-plus
+            #content.content
+                .content__header
+                    input(type="checkbox" id="select-all-users")
+                    -const headers = ['name', 'surname', 'email']
+
+                    each header in headers
+                        p.content__text.content__text--header= header
+                    
+                    a(href="#")#delete-all-users.content__link.button.button--delete.button--hide Delete All
+                        i.fas.fa-trash
+
+                #content-users.content__users
+        
+        #user-info.user-info
+            .top-bar
+                h1#top-bar-title.top-bar__title New User
+            .content__user.content__user--user-info
+                label Name
+                    input(type="text")#user-info-name.content__text
+                label Surname
+                    input(type="text")#user-info-surname.content__text
+                label Email
+                    input(type="text")#user-info-email.content__text
+                a(href="#")#add-user.content__link.button.button--edit Add User
+                    i.fas.fa-plus
+                a(href="#")#update-user.content__link.button.button--edit Edit User
+                    i.fas.fa-pen
+                a(href="#").content__link.button.button--cancel Cancel
+                    i.fas.fa-times
+                
+        script(src="js/crud.js")

@@ -1,0 +1,132 @@
+body{
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.main{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+ .all-users, .user-info{
+    background: steelblue;
+    width: 100%;
+    position: absolute;
+    transition: left .5s;
+}
+
+.all-users{
+    top: 0;
+    left: 0;
+
+    &--hide{
+        left: -100%;
+    }
+}
+
+.user-info{
+    left: 100%;
+
+    &--show{
+        left: 0;
+    }
+}
+
+.top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+    color:#fff;
+    border-bottom: 3px solid #fff;
+
+    &__buttons{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 25%;
+    }
+
+    &__user-info{
+        background:yellowgreen;
+        font-size: 1.5em;
+        padding: .2em .4em;
+        cursor: pointer;
+    }
+}
+
+.search{
+    border-bottom: 1px solid #fff;
+
+    & input{
+        font-size: 1em;
+        color: #fff;
+        border: none;
+        background: none;
+    }
+}
+
+.content{
+    &__header,
+    &__user{
+       display: grid;
+       grid-template-columns: 100px repeat(3,1fr) 150px 150px;
+       background: lightblue;
+       align-items: center;
+       justify-items: center;
+
+       &--user-info{
+           grid-template-columns: repeat(5,1fr);
+           padding: 1em .5em;
+       }
+    }
+
+    &__header{
+        border-bottom: 1px solid grey;
+    }
+
+    &__link{
+        text-decoration: none;
+        padding: 1em 0;
+    }
+
+    &__text{
+        text-transform: capitalize;
+
+        &.content__text--email{
+            text-transform: lowercase;
+        }
+
+        &--header{
+            text-transform: uppercase;
+        }
+    }
+}
+
+.button{
+    border-radius: 5px;
+    padding: .5em .8em;
+    cursor: pointer;
+    color: #fff;
+    display: block;
+
+    & i{
+        padding-left: .5em;
+    }
+
+    &--edit{
+        background:green;
+    }
+
+    &--delete, &--cancel{
+        background: crimson;
+    }
+
+    &--hide{
+        display: none;
+    }
+}

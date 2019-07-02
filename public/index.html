@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <main class="main" id="main">
+      <div class="all-users" id="all-users">
+        <div class="top-bar">
+          <h1 class="top-bar__title">All Users</h1>
+          <div class="top-bar__buttons">
+            <div class="search">
+              <input type="text" placeholder="Search User" id="search-text">
+            </div>
+            <div class="top-bar__user-info" id="user-info-button"><i class="fas fa-plus"></i></div>
+          </div>
+        </div>
+        <div class="content" id="content">
+          <div class="content__header">
+            <input type="checkbox" id="select-all-users">
+            <p class="content__text content__text--header">name</p>
+            <p class="content__text content__text--header">surname</p>
+            <p class="content__text content__text--header">email</p><a class="content__link button button--delete button--hide" href="#" id="delete-all-users">Delete All<i class="fas fa-trash"></i></a>
+          </div>
+          <div class="content__users" id="content-users"></div>
+        </div>
+      </div>
+      <div class="user-info" id="user-info">
+        <div class="top-bar">
+          <h1 class="top-bar__title" id="top-bar-title">New User</h1>
+        </div>
+        <div class="content__user content__user--user-info">
+          <label>Name
+            <input class="content__text" type="text" id="user-info-name">
+          </label>
+          <label>Surname
+            <input class="content__text" type="text" id="user-info-surname">
+          </label>
+          <label>Email
+            <input class="content__text" type="text" id="user-info-email">
+          </label><a class="content__link button button--edit" href="#" id="add-user">Add User<i class="fas fa-plus"></i></a><a class="content__link button button--edit" href="#" id="update-user">Edit User<i class="fas fa-pen"></i></a><a class="content__link button button--cancel" href="#">Cancel<i class="fas fa-times"></i></a>
+        </div>
+      </div>
+      <script src="js/crud.js"></script>
+    </main>
+  </body>
+</html>
